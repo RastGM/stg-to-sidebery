@@ -4,7 +4,7 @@ import os, json, random, string, time, datetime
 simple_tab_groups_file_path = "/full/path/to/manual-stg-backup-xyz.json"
 sidebery_snapshot_file_path = "/full/path/to/snapshot-xyz.json"
 
-with open(simple_tab_groups_file_path, 'r') as stg_file, open(sidebery_snapshot_file_path) as sidebery_file:
+with open(simple_tab_groups_file_path, 'r', encoding="utf8") as stg_file, open(sidebery_snapshot_file_path, encoding="utf8") as sidebery_file:
     # take in both files
     stg = json.load(stg_file)
     sbry = json.load(sidebery_file)
